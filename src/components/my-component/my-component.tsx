@@ -1,4 +1,5 @@
 import { Component, Prop } from '@stencil/core';
+import moment from 'moment-jalaali';
 
 @Component({
   tag: 'my-component',
@@ -11,6 +12,7 @@ export class MyComponent {
   @Prop() last: string;
 
   render() {
+    moment.loadPersian()
     return (
       <div>
         Hello, World! I'm {this.first} {this.last}
